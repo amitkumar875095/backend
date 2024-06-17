@@ -7,10 +7,15 @@ const userSchema = mongoose.Schema({
     email : {
         type :String,
         required : true,
+        unique : true,
     },
     password : {
         type :String,
         required : true,
+    },
+    pic : {
+    type : String,
+    default : "../img/boy.png",
     },
 },{timestamps : true});
 const User = mongoose.model('User',userSchema);
