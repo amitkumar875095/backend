@@ -9,7 +9,7 @@ const chatSchema = mongoose.Schema({
         },
         users : [{
             type : mongoose.Schema.Types.ObjectId,
-            ref : 'user',
+            ref : 'User',
         }],
         latestMessage : {
             type : mongoose.Schema.Types.ObjectId,
@@ -17,7 +17,7 @@ const chatSchema = mongoose.Schema({
         },
         groupAdmin : {
             type : mongoose.Schema.Types.ObjectId,
-            ref : 'user',
+            ref : 'User',
         }
 },{
         timestamps : true,
