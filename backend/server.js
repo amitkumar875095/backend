@@ -14,8 +14,9 @@ app.use(express.json());
 app.get('/',(req,res)=>{
     res.send("API is running");
 })
+
+app.use('/api/user',userRoutes);
 app.use(notFound);
 app.use(errorHandler);
-app.use('/api/user',userRoutes)
 const PORT = process.env.PORT
 app.listen(PORT,console.log("Server Started at Port ",PORT));
