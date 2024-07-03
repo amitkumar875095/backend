@@ -5,7 +5,7 @@ const expressAsyncHandler = require('express-async-handler');
 
 module.exports.registerUser = asynchandler(async (req,res)=>{
   
-    
+    console.log("User");
    const {name,email,password,pic} = req.body;
    if(!name || !email || !password){
      res.status(400);
